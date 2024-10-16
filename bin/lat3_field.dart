@@ -8,3 +8,20 @@ class Person {
   String? alamat;
   final String negara = "Indonesia";
 }
+
+// manipulasi field
+// Fields yang ada di object, bisa kita manipulasi. Tergantung final atau bukan.
+// Jika final, berarti kita tidak bisa mengubah data field nya, namun jika tidak, kita bisa mengubah field nya
+// Untuk memanipulasi data field, sama seperti cara pada variable
+// Untuk mengakses field, kita butuh kata kunci . (titik) setelah nama object dan diikuti nama field nya
+
+void main() {
+  var person = Person();
+  person.nama = "Kharis Raihan";
+  person.alamat = "Kapuas";
+  // person.negara = "tidak bisa di ubah karna menggunakan final"
+
+  print(person.nama);
+  print(person.alamat);
+  print(person.negara);
+}
