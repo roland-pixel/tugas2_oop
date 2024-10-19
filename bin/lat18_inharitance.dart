@@ -14,3 +14,14 @@ class Manager {
 }
 
 class viceprecident extends Manager {}
+
+// Kode : Mengakses Method Parent
+void main() {
+  var manager = Manager();
+  manager.nama = "Kharis Raihan";
+  manager.sayhello('Pep');
+
+  var vp = viceprecident();
+  vp.nama = "arne slot";
+  vp.sayhello('Klopp');
+}
