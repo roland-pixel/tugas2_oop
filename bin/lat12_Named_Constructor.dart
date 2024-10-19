@@ -13,4 +13,20 @@ class Person {
   Person(this.nama, this.alamat) {}
   Person.withName(this.nama) {}
   Person.withAddress(this.alamat) {}
+  void info() {
+    print("Nama: $nama");
+    print("Alamat: ${alamat ?? 'belum ada'}");
+    print("Negara: $negara");
+  }
+}
+
+// Menggunakan Named Constructor
+// Untuk membuat Object menggunakan Named Constructor, kita bisa langsung mengakses menggunakan Class.namedConstructor()
+void main() {
+  var person1 = Person.withName("Kharis");
+  var person2 = Person.withAddress("Kapuas");
+  var person3 = Person("Mulyono", "Solo");
+  person1.info();
+  person2.info();
+  person3.info();
 }
