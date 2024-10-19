@@ -15,3 +15,14 @@ class viceprecident extends Manager {
     print('halo $nama, nama ku ${this.nama}');
   }
 }
+
+// Kode : Mengakses Method Overriding
+void main() {
+  var manager = Manager();
+  manager.nama = "Kharis";
+  manager.sayhello('Raihan');
+
+  var vp = viceprecident();
+  vp.nama = "arne";
+  vp.sayhello('slot');
+}
