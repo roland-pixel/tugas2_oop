@@ -8,8 +8,20 @@ class Manager {
   Manager(String nama) {
     this.nama = nama;
   }
+  void katakanhai(String nama) {
+    print('halo $nama, nama ku ${this.nama}');
+  }
 }
 
 class Viceprecident extends Manager {
   Viceprecident(String nama) : super(nama) {}
+}
+
+// Kode : Menggunakan Super Constructor
+void main() {
+  var manager = Manager("kharis");
+  manager.katakanhai("Raihan");
+
+  var vp = Viceprecident("arne");
+  vp.katakanhai("slot");
 }
