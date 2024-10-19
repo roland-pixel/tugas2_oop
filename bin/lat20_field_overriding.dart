@@ -12,3 +12,9 @@ class Person {
 class Otherperson extends Person {
   String nama = "other person";
 }
+
+// Kode : Mengakses Field Overriding
+void main() {
+  var person = Otherperson();
+  person.sayhello('arne slot');
+}
