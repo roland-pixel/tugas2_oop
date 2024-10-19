@@ -11,6 +11,11 @@ class User {
     print('nama : $nama');
     print('email : $email');
   }
+
+  // Kode : Nullable Cascade Notation
+  User? buatuser() {
+    return null;
+  }
 }
 
 void main() {
