@@ -9,7 +9,18 @@ class Custemer {
 
   Custemer(this.nama_lengkap)
       : nama_depan = nama_lengkap.split(" ")[0],
-        nama_belakang = nama_lengkap.split(" ")[0] {
+        nama_belakang = nama_lengkap.split(" ")[1] {
     print("buat custemer baru");
   }
+  void info() {
+    print("Nama Lengkap: $nama_lengkap");
+    print("Nama Depan: $nama_depan");
+    print(
+        "Nama Belakang: ${nama_belakang.isEmpty ? 'tidak ada' : nama_belakang}");
+  }
+}
+
+void main() {
+  var cust1 = Custemer("Kharis Raihan");
+  cust1.info();
 }
