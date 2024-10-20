@@ -29,11 +29,24 @@ mixin Stoppable {
 // Secara default, semua class bisa menggunakan Mixin
 // Namun jika kita ingin membatasi hanya class turunan tertentu, kita bisa tambahkan kata kunci on, diikuti dengan class yang kita batasi pada Mixin nya
 
-// abstract class Multimedia {}
+abstract class Multimedia {}
 
-// mixin Playable on Multimedia {
-//   String? nama;
-//   void play() {
-//     print('play $nama');
-//   }
-// }
+mixin Playable on Multimedia {
+  String? nama;
+  void play() {
+    print('play $nama');
+  }
+}
+
+// Kode : Menggunakan Mixin
+class Video extends Multimedia with Playable, Stoppable {}
+
+class Audio extends Multimedia with Playable, Stoppable {}
+
+void main() {
+  var video = Video();
+  video.play();
+
+  var audio = Audio();
+  audio.play();
+}
