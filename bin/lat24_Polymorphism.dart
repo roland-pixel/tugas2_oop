@@ -16,6 +16,11 @@ class VicePrecident extends Manager {
   VicePrecident(String nama) : super(nama);
 }
 
+// Kode : Method Polymorphism
+void sayhello(Employee employee) {
+  print('Hello ${employee.nama}');
+}
+
 // Kode : Polymorphism
 void main() {
   Employee employee = Employee("Kharis");
@@ -26,4 +31,8 @@ void main() {
 
   employee = VicePrecident("Kharis");
   print(employee);
+
+  sayhello(Employee('Kharis'));
+  sayhello(Manager('Kharis'));
+  sayhello(VicePrecident('Kharis'));
 }
