@@ -13,13 +13,23 @@
 // Kode : Getter dan Setter
 class Rectangle {
   int _width = 0;
-  int _lengt = 0;
+  int _length = 0;
 
-  int get width {
-    return _width;
-  }
+  // int get width {
+  //   return _width;
+  // }
 
-  set width(int value) {
-    _width = value;
-  }
+  // set width(int value) {
+  //   _width = value;
+  // }
+
+  // expression Body
+  // Jika Getter dan Setter yang kita buat isinya hanya mengambil dan mengubah field, disarankan untuk menggunakan Expression Body
+// Cara membuat Expression Body mirip seperti Anonymous Function
+
+  int get width => _width;
+  set width(int value) => _width = value;
+
+  int get length => _length;
+  set length(int value) => _length = value;
 }
