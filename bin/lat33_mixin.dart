@@ -13,9 +13,14 @@ mixin Playable {
   }
 }
 
-mixin stoppable {
+mixin Stoppable {
   String? nama;
   void stop() {
     print("stop $nama");
   }
 }
+
+// Kode : Menggunakan Mixin
+class Video with Playable, Stoppable {}
+
+class audio with Playable, Stoppable {}
