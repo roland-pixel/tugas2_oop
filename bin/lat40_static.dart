@@ -11,7 +11,15 @@ class Application {
   static final String nama = "beljara pemrograman mobile";
 }
 
+// Kode : Static Method
+class Math {
+  static int sum(int first, int second) => first + second;
+}
+
 void main() {
   print(Application.nama);
   print(Application.author);
+
+  var result = Math.sum(34, 34);
+  print(result);
 }
