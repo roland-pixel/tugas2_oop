@@ -16,3 +16,16 @@ class Sample {
   @deprecated("dont use it anymore")
   void dontcallme() {}
 }
+
+// Membuat Annotation
+// Membuat Annotation sangat mudah, kita bisa membuat constant atau bisa membuat Class dengan menggunakan Constant Constructor
+// Kode : Membuat Annotation
+class Todo {
+  final String todo;
+  const Todo(this.todo);
+}
+
+class ApplicationLogic {
+  @Todo("will be impelemented in next feature")
+  void run() {}
+}
