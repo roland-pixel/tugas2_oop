@@ -24,3 +24,16 @@ class Validation {
     }
   }
 }
+
+// try catch
+// Saat kita memanggil sebuah method yang bisa menyebabkan exception, maka secara otomatis program akan berhenti.
+// Jika kita tidak ingin program berhenti, kita perlu menangkap exception tersebut, dan melakukan sesuatu ketika terjadi exception
+// Untuk menangkap exception, kita bisa menggunakan try-catch
+// Cara menggunakan try-catch sangat mudah, di block try, kita tinggal panggil method yang bisa menyebabkan exception, dan di block catch, kita bisa melakukan sesuatu jika terjadi exception
+void main() {
+  try {
+    Validation.validate("", "");
+  } on ValidationException {
+    print("Validation error");
+  }
+}
