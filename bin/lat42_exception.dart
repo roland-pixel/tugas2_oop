@@ -21,6 +21,8 @@ class Validation {
       throw Exception("username is blank");
     } else if (password == "") {
       throw Exception('password is blank');
+    } else if (username != "Kharis" || password != "Kharis") {
+      throw Exception("Login Failed");
     }
   }
 }
@@ -31,10 +33,19 @@ class Validation {
 // Untuk menangkap exception, kita bisa menggunakan try-catch
 // Cara menggunakan try-catch sangat mudah, di block try, kita tinggal panggil method yang bisa menyebabkan exception, dan di block catch, kita bisa melakukan sesuatu jika terjadi exception
 void main() {
+  // try {
+  //   Validation.validate("", "");
+  //   // Kode : Menangkap Object Exception
+  // } on ValidationException catch (exception) {
+  //   print("error: ${exception.massage}");
+  // }
+
+  // Kode : Multiple Try Catch
   try {
-    Validation.validate("", "");
-    // Kode : Menangkap Object Exception
+    Validation.validate("Kharis", "salah");
   } on ValidationException catch (exception) {
-    print("error: ${exception.massage}");
+    print("error : ${exception.massage}");
+  } on Exception catch (exception) {
+    print("error : ${exception.toString()}");
   }
 }
