@@ -14,4 +14,11 @@ class Category {
       return false;
     }
   }
+
+  // Kode : Override HashCode Method
+  int get hashCode {
+    var result = id.hashCode;
+    result += nama.hashCode;
+    return result;
+  }
 }
