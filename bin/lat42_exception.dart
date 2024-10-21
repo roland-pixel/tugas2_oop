@@ -47,5 +47,12 @@ void main() {
     print("error : ${exception.massage}");
   } on Exception catch (exception) {
     print("error : ${exception.toString()}");
+  } finally {
+    print('program selesai');
   }
+
+  // Finally
+  // Dalam try-catch, kita bisa menambahkan block finally
+  // Block finally ini adalah block dimana akan selalu dieksekusi baik terjadi exception ataupun tidak
+  // Ini sangat cocok ketika kita ingin melakukan sesuatu, tidak peduli sukses ataupun gagal
 }
