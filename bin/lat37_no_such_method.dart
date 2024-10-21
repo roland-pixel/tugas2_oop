@@ -3,4 +3,10 @@
 // https://api.dart.dev/stable/2.14.4/dart-core/Object/noSuchMethod.html
 // https://api.dart.dev/stable/2.14.4/dart-core/Invocation-class.html
 
+// Kode : Menggunakan NoSuchMethod
+import 'data/repository.dart';
 
+void main() {
+  dynamic repository = Repository('product');
+  repository.id('1234');
+}
