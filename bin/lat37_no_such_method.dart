@@ -7,6 +7,9 @@
 import 'data/repository.dart';
 
 void main() {
-  dynamic repository = Repository('product');
-  repository.id('1234');
+  // dynamic repository = Repository('product');
+  // repository.id('1234');
+  CategoryRepository categoryRepository = Repository('category');
+  categoryRepository.id('12345');
+  categoryRepository.nama('laptop');
 }
