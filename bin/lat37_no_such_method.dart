@@ -13,3 +13,6 @@ void main() {
   categoryRepository.id('12345');
   categoryRepository.nama('laptop');
 }
+
+// NoSuchMethod untuk Interface
+// Selain Abstract Class, NoSuchMethod juga bisa digunakan sebagai implementasi untuk Interface
