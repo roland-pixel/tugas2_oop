@@ -33,7 +33,8 @@ class Validation {
 void main() {
   try {
     Validation.validate("", "");
-  } on ValidationException {
-    print("Validation error");
+    // Kode : Menangkap Object Exception
+  } on ValidationException catch (exception) {
+    print("error: ${exception.massage}");
   }
 }
