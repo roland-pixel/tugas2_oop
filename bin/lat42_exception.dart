@@ -60,12 +60,30 @@ void main() {
   // Kadang kita tidak terlalu peduli dengan jenis class Exception
   // Pada kasus seperti ini, kita bisa tidak menyebutkan class nya ketika melakukan try-catch
   // Kode : Try Catch Semua Exception
+  // try {
+  //   Validation.validate("Kharis", "salah");
+  // } on ValidationException catch (exception) {
+  //   print("error : ${exception.massage}");
+  // } catch (exception) {
+  //   print("error : ${exception.toString()}");
+  // } finally {
+  //   print('program selesai');
+  // }
+
+  // Stack Trace
+  // Saat kita menangkap exception, object exception tidak memiliki informasi posisi atau lokasi terjadinya error
+  // Jika kita ingin mengetahui posisi atau lokasi terjadinya error, kita bisa menambahkan parameter kedua pada catch
+  // Secara otomatis parameter kedua tersebut adalah sebuah object StackTrace
+  // https://api.dart.dev/stable/2.14.4/dart-core/StackTrace-class.html
+  // Kode : Stack Trace
   try {
     Validation.validate("Kharis", "salah");
-  } on ValidationException catch (exception) {
+  } on ValidationException catch (exception, StackTrace) {
     print("error : ${exception.massage}");
-  } catch (exception) {
+    print("stack Trace : ${StackTrace.toString()}");
+  } catch (exception, StackTrace) {
     print("error : ${exception.toString()}");
+    print("stack Trace : ${StackTrace.toString()}");
   } finally {
     print('program selesai');
   }
