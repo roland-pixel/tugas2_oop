@@ -12,15 +12,6 @@
 // Sebanyak apapun hashCode dipanggil, untuk object yang sama, harus menghasilkan data integer yang sama
 // Jika ada 2 object yang sama jika dibandingkan menggunakan method equals, maka nilai hashCode nya juga harus sama
 
-// Kode : Override HashCode Method
-class Category {
-  String id = "";
-  String nama = "";
-  Category(this.id, this.nama);
 
-  int get hashCode {
-    var result = id.hashCode;
-    result += nama.hashCode;
-    return result;
-  }
-}
+
+// Kode : Menggunakan HashCode
